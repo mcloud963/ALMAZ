@@ -18,9 +18,6 @@
             color: #fff;
             min-height: 100vh;
             overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255, 204, 0, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(0, 204, 255, 0.05) 0%, transparent 20%);
         }
         
         .container {
@@ -29,33 +26,13 @@
             padding: 0 20px;
         }
         
-        /* Дизайн алмаза для заголовка */
-        .diamond-shape {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #ffcc00, #ff6b00);
-            transform: rotate(45deg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
-            position: relative;
-        }
-        
-        .diamond-shape i {
-            transform: rotate(-45deg);
-            font-size: 1.8rem;
-            color: #0a0a1a;
-        }
-        
         header {
-            background: rgba(10, 10, 26, 0.95);
+            background: rgba(10, 10, 40, 0.95);
             padding: 15px 0;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 2px solid rgba(255, 204, 0, 0.3);
+            border-bottom: 2px solid #ffcc00;
         }
         
         .header-content {
@@ -67,83 +44,77 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
         
-        .logo-text {
-            display: flex;
-            flex-direction: column;
+        .logo i {
+            color: #ffcc00;
+            font-size: 2.2rem;
         }
         
         .logo h1 {
-            font-size: 2.2rem;
-            background: linear-gradient(to right, #ffcc00, #ff9900, #ff6b00);
+            font-size: 1.8rem;
+            background: linear-gradient(to right, #ffcc00, #ff6b00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
-            letter-spacing: 1px;
-        }
-        
-        .logo-subtitle {
-            color: #00ccff;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 25px;
         }
         
         nav a {
             color: #fff;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            padding: 8px 15px;
-            border-radius: 8px;
-            position: relative;
-        }
-        
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(to right, #ffcc00, #ff6b00);
-            transition: all 0.3s;
-            transform: translateX(-50%);
+            transition: color 0.3s;
+            padding: 8px 12px;
+            border-radius: 5px;
         }
         
         nav a:hover {
             color: #ffcc00;
+            background: rgba(255, 204, 0, 0.1);
         }
         
-        nav a:hover::after {
-            width: 80%;
-        }
-        
-        .auth-buttons {
+        .user-panel {
             display: flex;
-            gap: 15px;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 204, 0, 0.1);
+            padding: 8px 15px;
+            border-radius: 50px;
+        }
+        
+        .user-name {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        
+        .user-balance {
+            background: rgba(0, 204, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 50px;
+            color: #00ccff;
+            font-weight: 600;
         }
         
         .btn {
-            padding: 12px 28px;
+            padding: 10px 25px;
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
             border: none;
             font-size: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
         
         .btn-login {
@@ -154,7 +125,6 @@
         
         .btn-login:hover {
             background: rgba(0, 204, 255, 0.1);
-            box-shadow: 0 0 15px rgba(0, 204, 255, 0.4);
         }
         
         .btn-register {
@@ -164,528 +134,316 @@
         
         .btn-register:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(255, 204, 0, 0.5);
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+        }
+        
+        .logout-btn {
+            background: rgba(255, 51, 51, 0.1);
+            color: #ff3333;
+            border: 1px solid rgba(255, 51, 51, 0.3);
+            padding: 8px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255, 51, 51, 0.2);
         }
         
         .hero {
-            padding: 100px 0 80px;
+            padding: 80px 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 204, 0, 0.05) 0%, transparent 70%);
-            z-index: -1;
         }
         
         .hero h2 {
-            font-size: 4rem;
-            margin-bottom: 25px;
-            background: linear-gradient(to right, #ffcc00, #ff9900, #ff6b00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto 50px;
-            color: #ccc;
-            line-height: 1.6;
-        }
-        
-        .highlight {
+            font-size: 3rem;
+            margin-bottom: 20px;
             color: #ffcc00;
-            font-weight: bold;
         }
         
         .games-section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-            font-size: 2.8rem;
-            color: #ffcc00;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(to right, #ffcc00, #ff6b00);
-            border-radius: 2px;
+            padding: 60px 0;
         }
         
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
         }
         
         .game-card {
-            background: rgba(20, 20, 40, 0.7);
-            border-radius: 20px;
+            background: rgba(20, 20, 60, 0.7);
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-            transition: all 0.4s;
-            position: relative;
-            border: 1px solid rgba(255, 204, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
         }
         
         .game-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(255, 204, 0, 0.2);
-            border-color: rgba(255, 204, 0, 0.3);
-        }
-        
-        .game-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(to right, #ffcc00, #ff6b00);
+            transform: translateY(-10px);
         }
         
         .game-icon {
-            height: 180px;
+            height: 150px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5.5rem;
-            position: relative;
-            overflow: hidden;
+            font-size: 4rem;
+            color: white;
         }
         
-        .game-icon::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+        .mine-bg {
+            background: linear-gradient(to bottom, #ff3333, #990000);
         }
         
-        .mine {
-            background: linear-gradient(135deg, #ff3333, #990000);
-            color: #ffcc00;
+        .rocket-bg {
+            background: linear-gradient(to bottom, #3366ff, #003399);
         }
         
-        .rocket {
-            background: linear-gradient(135deg, #3366ff, #0033cc);
-            color: #fff;
+        .dice-bg {
+            background: linear-gradient(to bottom, #33cc33, #006600);
         }
         
-        .dice {
-            background: linear-gradient(135deg, #33cc33, #006600);
-            color: #fff;
-        }
-        
-        .coin {
-            background: linear-gradient(135deg, #ffcc00, #cc9900);
-            color: #333;
-        }
-        
-        .jackpot {
-            background: linear-gradient(135deg, #cc33ff, #6600cc);
-            color: #fff;
-        }
-        
-        .crash {
-            background: linear-gradient(135deg, #ff9933, #cc6600);
-            color: #fff;
+        .coin-bg {
+            background: linear-gradient(to bottom, #ffcc00, #cc9900);
         }
         
         .game-info {
-            padding: 30px;
+            padding: 20px;
         }
         
         .game-info h3 {
-            font-size: 1.9rem;
-            margin-bottom: 15px;
             color: #ffcc00;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .game-info p {
-            color: #ccc;
-            line-height: 1.6;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
         
         .play-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: linear-gradient(to right, #00ccff, #0066ff);
+            display: inline-block;
+            background: linear-gradient(to right, #3366ff, #00ccff);
             color: white;
-            padding: 14px 35px;
+            padding: 12px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
+            margin-top: 10px;
             border: none;
             cursor: pointer;
             width: 100%;
         }
         
         .play-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(0, 102, 255, 0.5);
+            opacity: 0.9;
         }
         
-        .animation-area {
-            position: relative;
-            height: 350px;
-            margin: 80px 0;
-            overflow: hidden;
+        .play-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        
+        /* Модальные окна */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a2e, #0a0a1a);
+            padding: 40px;
             border-radius: 20px;
-            background: rgba(10, 10, 26, 0.6);
-            border: 1px solid rgba(255, 204, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            border: 2px solid rgba(255, 204, 0, 0.3);
         }
         
-        .floating-object {
-            position: absolute;
-            font-size: 2.8rem;
-            animation: float 20s infinite linear;
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
-            z-index: 1;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(0) translateX(0) rotate(0deg);
-            }
-            25% {
-                transform: translateY(-120px) translateX(120px) rotate(90deg);
-            }
-            50% {
-                transform: translateY(0) translateX(240px) rotate(180deg);
-            }
-            75% {
-                transform: translateY(120px) translateX(120px) rotate(270deg);
-            }
-            100% {
-                transform: translateY(0) translateX(0) rotate(360deg);
-            }
-        }
-        
-        .mine-object {
-            color: #ff3333;
-            top: 60px;
-            left: 10%;
-            animation-delay: 0s;
-        }
-        
-        .rocket-object {
-            color: #3366ff;
-            top: 120px;
-            left: 40%;
-            animation-delay: -5s;
-            animation-duration: 25s;
-        }
-        
-        .coin-object {
-            color: #ffcc00;
-            top: 40px;
-            left: 70%;
-            animation-delay: -10s;
-            animation-duration: 30s;
-        }
-        
-        .dice-object {
-            color: #33cc33;
-            top: 220px;
-            left: 20%;
-            animation-delay: -7s;
-        }
-        
-        .diamond-object {
-            color: #00ccff;
-            top: 180px;
-            left: 60%;
-            animation-delay: -12s;
-            animation-duration: 35s;
-        }
-        
-        .features {
-            display: flex;
-            justify-content: space-around;
-            margin: 60px 0;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .feature-item {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(255, 204, 0, 0.05);
-            border-radius: 15px;
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 204, 0, 0.1);
-        }
-        
-        .feature-item:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 204, 0, 0.1);
-            border-color: rgba(255, 204, 0, 0.3);
-        }
-        
-        .feature-icon {
-            font-size: 3.5rem;
+        .form-group {
             margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
             color: #ffcc00;
         }
         
-        .feature-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #fff;
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 204, 0, 0.3);
+            border-radius: 8px;
+            color: white;
         }
         
-        .feature-desc {
-            color: #ccc;
-            line-height: 1.5;
+        .game-modal {
+            max-width: 800px;
+        }
+        
+        .game-container {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        
+        .mine-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .mine-cell {
+            width: 60px;
+            height: 60px;
+            background: #3366ff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .mine-cell:hover {
+            background: #4488ff;
+            transform: scale(1.05);
+        }
+        
+        .mine-cell.revealed {
+            background: #33cc33;
+        }
+        
+        .mine-cell.mine {
+            background: #ff3333;
+        }
+        
+        .rocket-container {
+            height: 300px;
+            position: relative;
+            margin: 20px 0;
+        }
+        
+        .rocket {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            color: #ffcc00;
+            transition: bottom 3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+        
+        .rocket.flying {
+            bottom: 80%;
+        }
+        
+        .rocket-controls {
+            margin-top: 20px;
+        }
+        
+        .multiplier {
+            font-size: 2rem;
+            color: #ffcc00;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .dice-result {
+            font-size: 5rem;
+            text-align: center;
+            margin: 20px 0;
+            color: #ffcc00;
+        }
+        
+        .dice-roll {
+            animation: roll 0.5s ease-in-out;
+        }
+        
+        @keyframes roll {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .coin-result {
+            font-size: 5rem;
+            text-align: center;
+            margin: 20px 0;
+            color: #ffcc00;
+        }
+        
+        .coin-flip {
+            animation: flip 0.5s ease-in-out;
+        }
+        
+        @keyframes flip {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        
+        .game-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 204, 0, 0.1);
+            border-radius: 10px;
+        }
+        
+        .bet-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .bet-amount {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: white;
+            font-size: 1.2rem;
         }
         
         footer {
-            background: rgba(10, 10, 26, 0.95);
-            padding: 50px 0 25px;
-            margin-top: 80px;
-            border-top: 2px solid rgba(255, 204, 0, 0.3);
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column {
-            flex: 1;
-            min-width: 250px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column h3 {
-            color: #ffcc00;
-            margin-bottom: 25px;
-            font-size: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(to right, #ffcc00, #ff6b00);
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-column ul li a {
-            color: #ccc;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .footer-column ul li a:hover {
-            color: #ffcc00;
-            transform: translateX(5px);
-        }
-        
-        .copyright {
+            background: rgba(10, 10, 40, 0.9);
+            padding: 30px 0;
+            margin-top: 60px;
             text-align: center;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #999;
-            font-size: 0.9rem;
         }
         
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin: 50px 0;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 25px 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            min-width: 200px;
-            transition: all 0.3s;
-        }
-        
-        .stat-item:hover {
-            background: rgba(255, 204, 0, 0.1);
-            transform: translateY(-5px);
-        }
-        
-        .stat-number {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #ffcc00;
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
-        }
-        
-        .stat-label {
-            color: #ccc;
-            font-size: 1.1rem;
-        }
-        
-        .promo-banner {
-            background: linear-gradient(135deg, rgba(255, 204, 0, 0.1), rgba(0, 204, 255, 0.1));
-            border-radius: 20px;
-            padding: 40px;
-            margin: 60px 0;
-            text-align: center;
-            border: 1px solid rgba(255, 204, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .promo-banner::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 204, 0, 0.1) 0%, transparent 70%);
-            z-index: -1;
-        }
-        
-        .promo-title {
-            font-size: 2.5rem;
-            color: #ffcc00;
-            margin-bottom: 20px;
-        }
-        
-        .promo-text {
-            font-size: 1.2rem;
-            color: #ccc;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .promo-code {
-            display: inline-block;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #ffcc00;
-            letter-spacing: 3px;
-            border: 2px dashed #ffcc00;
-            margin-bottom: 30px;
-        }
-        
-        @media (max-width: 992px) {
+        @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
-                gap: 25px;
+                gap: 20px;
             }
             
             nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 20px;
-            }
-            
-            .hero h2 {
-                font-size: 3rem;
-            }
-            
-            .games-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-                padding: 0 15px;
             }
             
             .games-grid {
                 grid-template-columns: 1fr;
             }
             
-            .footer-content {
-                flex-direction: column;
+            .mine-grid {
+                grid-template-columns: repeat(4, 1fr);
             }
             
-            .auth-buttons {
-                flex-direction: column;
-                width: 100%;
-                max-width: 300px;
+            .mine-cell {
+                width: 50px;
+                height: 50px;
             }
-            
-            .btn {
-                justify-content: center;
-            }
-        }
-        
-        /* Анимация пульсации для алмаза */
-        @keyframes pulse {
-            0% { box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); }
-            50% { box-shadow: 0 0 25px rgba(255, 204, 0, 0.8); }
-            100% { box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); }
-        }
-        
-        .diamond-shape {
-            animation: pulse 2s infinite;
         }
     </style>
 </head>
@@ -694,26 +452,36 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="diamond-shape">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <div class="logo-text">
-                        <h1>ALMAZ</h1>
-                        <div class="logo-subtitle">Gaming Platform</div>
-                    </div>
+                    <i class="fas fa-gem"></i>
+                    <h1>ALMAZ</h1>
                 </div>
                 <nav>
                     <ul>
                         <li><a href="#"><i class="fas fa-home"></i> Главная</a></li>
                         <li><a href="#games"><i class="fas fa-gamepad"></i> Игры</a></li>
                         <li><a href="#"><i class="fas fa-trophy"></i> Турниры</a></li>
-                        <li><a href="#"><i class="fas fa-gift"></i> Бонусы</a></li>
-                        <li><a href="#"><i class="fas fa-star"></i> VIP</a></li>
                     </ul>
                 </nav>
-                <div class="auth-buttons">
-                    <button class="btn btn-login"><i class="fas fa-sign-in-alt"></i> Вход</button>
-                    <button class="btn btn-register"><i class="fas fa-user-plus"></i> Регистрация</button>
+                
+                <!-- Панель пользователя (меняется в зависимости от авторизации) -->
+                <div id="authSection">
+                    <div class="user-panel" id="userPanel" style="display: none;">
+                        <div class="user-info">
+                            <i class="fas fa-user"></i>
+                            <span class="user-name" id="displayUsername">Гость</span>
+                        </div>
+                        <div class="user-balance">
+                            Баланс: <span id="displayBalance">1000</span> ₽
+                        </div>
+                        <button class="logout-btn" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="auth-buttons" id="authButtons">
+                        <button class="btn btn-login" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Вход</button>
+                        <button class="btn btn-register" id="registerBtn"><i class="fas fa-user-plus"></i> Регистрация</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -721,413 +489,757 @@
     
     <section class="hero">
         <div class="container">
-            <h2>ALMAZ - Играй по-крупному!</h2>
-            <p>Добро пожаловать на самую яркую игровую платформу! Испытай удачу в <span class="highlight">Мине</span>, запускай <span class="highlight">Ракету</span>, бросай <span class="highlight">Кости</span> и выигрывай настоящие алмазы! Быстрые выплаты, честные игры и эксклюзивные бонусы только для тебя.</p>
-            
-            <div class="promo-banner">
-                <div class="promo-title">БОНУС НОВИЧКАМ 200%</div>
-                <div class="promo-text">Зарегистрируйся сегодня и получи увеличенный бонус на первый депозит</div>
-                <div class="promo-code">ALMAZ200</div>
-                <button class="btn btn-register"><i class="fas fa-gift"></i> Получить бонус</button>
-            </div>
-            
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">75K+</div>
-                    <div class="stat-label">Игроков онлайн</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">200+</div>
-                    <div class="stat-label">Игровых автоматов</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">2.5M ₽</div>
-                    <div class="stat-label">Выиграно сегодня</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Поддержка</div>
-                </div>
-            </div>
+            <h2>Игровая платформа ALMAZ</h2>
+            <p>Играйте в увлекательные игры и выигрывайте призы! Зарегистрируйтесь, чтобы получить стартовый бонус.</p>
         </div>
     </section>
-    
-    <div class="animation-area">
-        <div class="floating-object mine-object">
-            <i class="fas fa-bomb"></i>
-        </div>
-        <div class="floating-object rocket-object">
-            <i class="fas fa-rocket"></i>
-        </div>
-        <div class="floating-object coin-object">
-            <i class="fas fa-coins"></i>
-        </div>
-        <div class="floating-object dice-object">
-            <i class="fas fa-dice"></i>
-        </div>
-        <div class="floating-object diamond-object">
-            <i class="fas fa-gem"></i>
-        </div>
-    </div>
     
     <section class="games-section" id="games">
         <div class="container">
-            <h2 class="section-title">Популярные игры</h2>
+            <h2 style="text-align: center; color: #ffcc00; margin-bottom: 30px;">Игры</h2>
             <div class="games-grid">
+                <!-- Игра Мины -->
                 <div class="game-card">
-                    <div class="game-icon mine">
+                    <div class="game-icon mine-bg">
                         <i class="fas fa-bomb"></i>
                     </div>
                     <div class="game-info">
-                        <h3><i class="fas fa-bomb"></i> Алмазная Мина</h3>
-                        <p>Экстремальная игра на удачу! Раскрывайте клетки с алмазами и избегайте мин. Каждый ход увеличивает ваш выигрыш. Максимальный множитель x1000!</p>
-                        <button class="play-btn"><i class="fas fa-play-circle"></i> Играть сейчас</button>
+                        <h3>Мины</h3>
+                        <p>Найдите все алмазы, избегая мин. Каждый шаг увеличивает множитель выигрыша.</p>
+                        <button class="play-btn" data-game="mine">Играть в Мины</button>
                     </div>
                 </div>
                 
+                <!-- Игра Ракета -->
                 <div class="game-card">
-                    <div class="game-icon rocket">
+                    <div class="game-icon rocket-bg">
                         <i class="fas fa-rocket"></i>
                     </div>
                     <div class="game-info">
-                        <h3><i class="fas fa-rocket"></i> Космическая Ракета</h3>
-                        <p>Запускайте ракету в космос! Ваша задача - остановить ее на пиковой высоте. Чем выше взлетела ракета, тем больше ваш выигрыш. Взлетайте к победе!</p>
-                        <button class="play-btn"><i class="fas fa-play-circle"></i> Играть сейчас</button>
+                        <h3>Ракета</h3>
+                        <p>Запустите ракету и вовремя остановите её, чтобы получить максимальный выигрыш.</p>
+                        <button class="play-btn" data-game="rocket">Играть в Ракету</button>
                     </div>
                 </div>
                 
+                <!-- Игра Кости -->
                 <div class="game-card">
-                    <div class="game-icon dice">
+                    <div class="game-icon dice-bg">
                         <i class="fas fa-dice"></i>
                     </div>
                     <div class="game-info">
-                        <h3><i class="fas fa-dice"></i> Алмазные Кости</h3>
-                        <p>Бросьте кости и сорвите джекпот! Угадайте результат броска или сумму очков. Простая механика, невероятные выигрыши и адреналин.</p>
-                        <button class="play-btn"><i class="fas fa-play-circle"></i> Играть сейчас</button>
+                        <h3>Кости</h3>
+                        <p>Бросьте кости и попытайтесь угадать результат. Просто, но увлекательно!</p>
+                        <button class="play-btn" data-game="dice">Играть в Кости</button>
                     </div>
                 </div>
                 
+                <!-- Игра Монетка -->
                 <div class="game-card">
-                    <div class="game-icon coin">
+                    <div class="game-icon coin-bg">
                         <i class="fas fa-coins"></i>
                     </div>
                     <div class="game-info">
-                        <h3><i class="fas fa-coins"></i> Золотая Монета</h3>
-                        <p>Орел или решка? Классическая игра с мгновенным результатом. Сделайте ставку и узнайте свою удачу. Идеально для быстрых раундов.</p>
-                        <button class="play-btn"><i class="fas fa-play-circle"></i> Играть сейчас</button>
-                    </div>
-                </div>
-                
-                <div class="game-card">
-                    <div class="game-icon jackpot">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <div class="game-info">
-                        <h3><i class="fas fa-crown"></i> Алмазный Джекпот</h3>
-                        <p>Испытайте удачу в розыгрыше прогрессивного джекпота! Сумма растет с каждой минутой. Кто следующий сорвет главный приз?</p>
-                        <button class="play-btn"><i class="fas fa-play-circle"></i> Играть сейчас</button>
-                    </div>
-                </div>
-                
-                <div class="game-card">
-                    <div class="game-icon crash">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="game-info">
-                        <h3><i class="fas fa-chart-line"></i> Алмазный Краш</h3>
-                        <p>Следите за растущим графиком и успевайте вывести деньги до краша! Максимальный множитель достигает x500. Проверьте свою интуицию!</p>
-                        <button class="play-btn"><i class="fas fa-play-circle"></i> Играть сейчас</button>
+                        <h3>Монетка</h3>
+                        <p>Орел или решка? Сделайте ставку и испытайте свою удачу.</p>
+                        <button class="play-btn" data-game="coin">Играть в Монетку</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <div class="container">
-        <div class="features">
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <i class="fas fa-shield-alt"></i>
+    <!-- Модальное окно входа -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-content">
+            <h2 style="color: #ffcc00; text-align: center; margin-bottom: 20px;">Вход</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Имя пользователя</label>
+                    <input type="text" id="loginUsername" class="form-control" required>
                 </div>
-                <h3 class="feature-title">100% Безопасность</h3>
-                <p class="feature-desc">Ваши данные и средства под надежной защитой. Используем современные технологии шифрования.</p>
-            </div>
-            
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <i class="fas fa-bolt"></i>
+                <div class="form-group">
+                    <label for="loginPassword">Пароль</label>
+                    <input type="password" id="loginPassword" class="form-control" required>
                 </div>
-                <h3 class="feature-title">Мгновенные выплаты</h3>
-                <p class="feature-desc">Вывод средств занимает не более 5 минут. Работаем с популярными платежными системами.</p>
+                <button type="submit" class="btn btn-register" style="width: 100%;">Войти</button>
+            </form>
+            <div style="text-align: center; margin-top: 15px;">
+                <span style="color: #ccc;">Нет аккаунта? </span>
+                <a href="#" id="showRegisterForm" style="color: #00ccff;">Зарегистрироваться</a>
             </div>
-            
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <i class="fas fa-headset"></i>
+            <button class="btn btn-login" style="width: 100%; margin-top: 15px;" id="closeLoginModal">Закрыть</button>
+        </div>
+    </div>
+    
+    <!-- Модальное окно регистрации -->
+    <div class="modal-overlay" id="registerModal">
+        <div class="modal-content">
+            <h2 style="color: #ffcc00; text-align: center; margin-bottom: 20px;">Регистрация</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regUsername">Имя пользователя</label>
+                    <input type="text" id="regUsername" class="form-control" required>
                 </div>
-                <h3 class="feature-title">Поддержка 24/7</h3>
-                <p class="feature-desc">Наша команда поддержки всегда на связи. Решаем любые вопросы в течение 10 минут.</p>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Пароль</label>
+                    <input type="password" id="regPassword" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Подтвердите пароль</label>
+                    <input type="password" id="regConfirmPassword" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-register" style="width: 100%;">Зарегистрироваться</button>
+            </form>
+            <div style="text-align: center; margin-top: 15px;">
+                <span style="color: #ccc;">Уже есть аккаунт? </span>
+                <a href="#" id="showLoginForm" style="color: #00ccff;">Войти</a>
             </div>
+            <button class="btn btn-login" style="width: 100%; margin-top: 15px;" id="closeRegisterModal">Закрыть</button>
+        </div>
+    </div>
+    
+    <!-- Модальное окно игры -->
+    <div class="modal-overlay" id="gameModal">
+        <div class="modal-content game-modal">
+            <h2 id="gameTitle" style="color: #ffcc00; text-align: center;"></h2>
+            <div class="game-container" id="gameContainer">
+                <!-- Контент игры будет загружаться сюда -->
+            </div>
+            <button class="btn btn-login" style="width: 100%; margin-top: 20px;" id="closeGameModal">Закрыть игру</button>
         </div>
     </div>
     
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>ALMAZ</h3>
-                    <p>Ведущая игровая платформа с моментальными выплатами, честными играми и эксклюзивными бонусами для каждого игрока.</p>
-                    <div style="margin-top: 20px; display: flex; gap: 15px;">
-                        <div class="diamond-shape" style="width: 40px; height: 40px;">
-                            <i class="fas fa-gem" style="font-size: 1.3rem;"></i>
-                        </div>
-                        <div class="diamond-shape" style="width: 40px; height: 40px; background: linear-gradient(45deg, #00ccff, #0066ff);">
-                            <i class="fas fa-rocket" style="font-size: 1.3rem;"></i>
-                        </div>
-                        <div class="diamond-shape" style="width: 40px; height: 40px; background: linear-gradient(45deg, #33cc33, #006600);">
-                            <i class="fas fa-dice" style="font-size: 1.3rem;"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Игры</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-bomb"></i> Алмазная Мина</a></li>
-                        <li><a href="#"><i class="fas fa-rocket"></i> Космическая Ракета</a></li>
-                        <li><a href="#"><i class="fas fa-dice"></i> Алмазные Кости</a></li>
-                        <li><a href="#"><i class="fas fa-crown"></i> Алмазный Джекпот</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Помощь</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                        <li><a href="#"><i class="fas fa-book"></i> Правила</a></li>
-                        <li><a href="#"><i class="fas fa-headset"></i> Поддержка</a></li>
-                        <li><a href="#"><i class="fas fa-shield-alt"></i> Безопасность</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Контакты</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-envelope"></i> support@almaz.com</a></li>
-                        <li><a href="#"><i class="fab fa-telegram"></i> Telegram</a></li>
-                        <li><a href="#"><i class="fab fa-vk"></i> ВКонтакте</a></li>
-                        <li><a href="#"><i class="fas fa-phone"></i> 8-800-ALMAZ-00</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2023 ALMAZ Gaming Platform. Все права защищены. Только для лиц старше 18 лет. Играйте ответственно.</p>
-                <p style="margin-top: 10px; font-size: 0.8rem;">Лицензия на осуществление азартных игр № 000000 от 01.01.2023</p>
-            </div>
+            <p>© 2023 ALMAZ Gaming. Демо-версия. Все данные хранятся локально в вашем браузере.</p>
+            <p style="margin-top: 10px; color: #ccc; font-size: 0.9rem;">Это демонстрационный проект для обучения. Не используйте реальные данные.</p>
         </div>
     </footer>
-    
+
     <script>
-        // Анимация кнопок
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px)';
-            });
-            
-            button.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-        
-        // Анимация счетчиков
-        function animateCounter(element, finalValue, duration) {
-            let startValue = 0;
-            let increment = finalValue / (duration / 16);
-            let currentValue = startValue;
-            const timer = setInterval(() => {
-                currentValue += increment;
-                if (currentValue >= finalValue) {
-                    currentValue = finalValue;
-                    clearInterval(timer);
-                }
-                element.textContent = formatNumber(Math.floor(currentValue));
-            }, 16);
-        }
-        
-        function formatNumber(num) {
-            if (num >= 1000000) {
-                return (num / 1000000).toFixed(1) + 'M';
-            } else if (num >= 1000) {
-                return (num / 1000).toFixed(0) + 'K';
+        // Система пользователей (данные хранятся только в LocalStorage браузера)
+        class UserSystem {
+            constructor() {
+                this.currentUser = null;
+                this.users = JSON.parse(localStorage.getItem('almaz_users')) || [];
+                this.loadCurrentUser();
             }
-            return num.toLocaleString();
+            
+            // Загрузка текущего пользователя
+            loadCurrentUser() {
+                const savedUser = localStorage.getItem('almaz_current_user');
+                if (savedUser) {
+                    this.currentUser = JSON.parse(savedUser);
+                    this.updateUI();
+                }
+            }
+            
+            // Регистрация нового пользователя
+            register(username, email, password) {
+                // Проверяем, существует ли пользователь
+                if (this.users.find(u => u.username === username)) {
+                    return { success: false, message: 'Пользователь с таким именем уже существует' };
+                }
+                
+                if (this.users.find(u => u.email === email)) {
+                    return { success: false, message: 'Пользователь с таким email уже существует' };
+                }
+                
+                // Создаем нового пользователя
+                const newUser = {
+                    id: Date.now(),
+                    username,
+                    email,
+                    password: this.hashPassword(password), // В реальном проекте НЕ ДЕЛАЙТЕ ТАК!
+                    balance: 1000, // Стартовый баланс
+                    registered: new Date().toISOString()
+                };
+                
+                this.users.push(newUser);
+                this.saveUsers();
+                
+                // Автоматически входим после регистрации
+                return this.login(username, password);
+            }
+            
+            // Вход пользователя
+            login(username, password) {
+                const user = this.users.find(u => 
+                    (u.username === username || u.email === username) && 
+                    u.password === this.hashPassword(password)
+                );
+                
+                if (user) {
+                    this.currentUser = { ...user };
+                    localStorage.setItem('almaz_current_user', JSON.stringify(this.currentUser));
+                    this.updateUI();
+                    return { success: true, user: this.currentUser };
+                }
+                
+                return { success: false, message: 'Неверное имя пользователя или пароль' };
+            }
+            
+            // Выход пользователя
+            logout() {
+                this.currentUser = null;
+                localStorage.removeItem('almaz_current_user');
+                this.updateUI();
+            }
+            
+            // Обновление баланса
+            updateBalance(amount) {
+                if (!this.currentUser) return false;
+                
+                this.currentUser.balance += amount;
+                
+                // Обновляем в общем списке
+                const userIndex = this.users.findIndex(u => u.id === this.currentUser.id);
+                if (userIndex !== -1) {
+                    this.users[userIndex].balance = this.currentUser.balance;
+                    this.saveUsers();
+                }
+                
+                localStorage.setItem('almaz_current_user', JSON.stringify(this.currentUser));
+                this.updateUI();
+                return true;
+            }
+            
+            // Простая хэш-функция (для демо!)
+            hashPassword(password) {
+                // ⚠️ ВНИМАНИЕ: Это НЕ безопасный метод хэширования!
+                // В реальном проекте используйте bcrypt или аналоги
+                return btoa(password + 'almaz_salt');
+            }
+            
+            // Сохранение пользователей
+            saveUsers() {
+                localStorage.setItem('almaz_users', JSON.stringify(this.users));
+            }
+            
+            // Обновление интерфейса
+            updateUI() {
+                const userPanel = document.getElementById('userPanel');
+                const authButtons = document.getElementById('authButtons');
+                
+                if (this.currentUser) {
+                    // Показываем панель пользователя
+                    userPanel.style.display = 'flex';
+                    authButtons.style.display = 'none';
+                    
+                    // Обновляем данные
+                    document.getElementById('displayUsername').textContent = this.currentUser.username;
+                    document.getElementById('displayBalance').textContent = this.currentUser.balance;
+                    
+                    // Разблокируем кнопки игр
+                    document.querySelectorAll('.play-btn').forEach(btn => {
+                        btn.disabled = false;
+                    });
+                } else {
+                    // Показываем кнопки входа/регистрации
+                    userPanel.style.display = 'none';
+                    authButtons.style.display = 'flex';
+                    
+                    // Блокируем кнопки игр
+                    document.querySelectorAll('.play-btn').forEach(btn => {
+                        btn.disabled = true;
+                    });
+                }
+            }
         }
         
-        // Инициализация при загрузке
-        document.addEventListener('DOMContentLoaded', function() {
-            // Анимация счетчиков
-            setTimeout(() => {
-                const statNumbers = document.querySelectorAll('.stat-number');
-                animateCounter(statNumbers[0], 75000, 2000);
-                animateCounter(statNumbers[1], 200, 1500);
-                animateCounter(statNumbers[2], 2500000, 2500);
-            }, 800);
+        // Инициализация системы пользователей
+        const userSystem = new UserSystem();
+        
+        // Игровая система
+        class GameSystem {
+            constructor() {
+                this.currentGame = null;
+                this.currentBet = 10;
+                this.setupEventListeners();
+            }
             
-            // Анимация карточек игр
-            const gameCards = document.querySelectorAll('.game-card');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+            setupEventListeners() {
+                // Кнопки игр
+                document.querySelectorAll('.play-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        if (!userSystem.currentUser) {
+                            alert('Для игры необходимо войти в систему!');
+                            document.getElementById('loginModal').style.display = 'flex';
+                            return;
+                        }
+                        
+                        const gameType = e.target.dataset.game;
+                        this.startGame(gameType);
+                    });
+                });
+                
+                // Управление ставками
+                document.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('bet-minus')) {
+                        this.changeBet(-10);
+                    } else if (e.target.classList.contains('bet-plus')) {
+                        this.changeBet(10);
                     }
                 });
-            }, { threshold: 0.1 });
-            
-            gameCards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'opacity 0.6s, transform 0.6s';
-                observer.observe(card);
-            });
-            
-            // Обработчики для кнопок
-            document.querySelector('.btn-register').addEventListener('click', function() {
-                showModal('Регистрация', 'Добро пожаловать на ALMAZ! Для регистрации укажите ваш email и придумайте пароль.');
-            });
-            
-            document.querySelectorAll('.play-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const gameName = this.closest('.game-info').querySelector('h3').textContent;
-                    showModal('Начать игру', `Для начала игры "${gameName}" необходимо авторизоваться на платформе ALMAZ.`);
-                });
-            });
-            
-            // Создание плавающих объектов
-            function createFloatingObject() {
-                const animationArea = document.querySelector('.animation-area');
-                const icons = [
-                    {icon: 'fa-bomb', color: '#ff3333'},
-                    {icon: 'fa-rocket', color: '#3366ff'},
-                    {icon: 'fa-coins', color: '#ffcc00'},
-                    {icon: 'fa-dice', color: '#33cc33'},
-                    {icon: 'fa-gem', color: '#00ccff'},
-                    {icon: 'fa-crown', color: '#cc33ff'},
-                    {icon: 'fa-chart-line', color: '#ff9933'}
-                ];
-                
-                const randomIcon = icons[Math.floor(Math.random() * icons.length)];
-                
-                const object = document.createElement('div');
-                object.className = 'floating-object';
-                object.innerHTML = `<i class="fas ${randomIcon.icon}"></i>`;
-                object.style.color = randomIcon.color;
-                object.style.left = Math.random() * 90 + '%';
-                object.style.top = Math.random() * 80 + '%';
-                object.style.fontSize = (Math.random() * 2 + 1.8) + 'rem';
-                object.style.animationDuration = (Math.random() * 25 + 20) + 's';
-                object.style.animationDelay = '-' + (Math.random() * 25) + 's';
-                object.style.opacity = '0.8';
-                
-                animationArea.appendChild(object);
-                
-                setTimeout(() => {
-                    object.remove();
-                }, 40000);
             }
             
-            // Создание объектов
-            setInterval(createFloatingObject, 2500);
-            for (let i = 0; i < 8; i++) {
-                setTimeout(createFloatingObject, i * 400);
+            changeBet(amount) {
+                this.currentBet = Math.max(10, this.currentBet + amount);
+                document.getElementById('currentBet').textContent = this.currentBet;
+            }
+            
+            startGame(gameType) {
+                this.currentGame = gameType;
+                const gameTitle = document.getElementById('gameTitle');
+                const gameContainer = document.getElementById('gameContainer');
+                
+                // Устанавливаем заголовок
+                const gameNames = {
+                    'mine': 'Игра "Мины"',
+                    'rocket': 'Игра "Ракета"',
+                    'dice': 'Игра "Кости"',
+                    'coin': 'Игра "Монетка"'
+                };
+                gameTitle.textContent = gameNames[gameType];
+                
+                // Загружаем игру
+                switch(gameType) {
+                    case 'mine':
+                        this.loadMineGame(gameContainer);
+                        break;
+                    case 'rocket':
+                        this.loadRocketGame(gameContainer);
+                        break;
+                    case 'dice':
+                        this.loadDiceGame(gameContainer);
+                        break;
+                    case 'coin':
+                        this.loadCoinGame(gameContainer);
+                        break;
+                }
+                
+                // Показываем модальное окно
+                document.getElementById('gameModal').style.display = 'flex';
+            }
+            
+            loadMineGame(container) {
+                container.innerHTML = `
+                    <div class="game-stats">
+                        <div>Баланс: <span style="color: #ffcc00;">${userSystem.currentUser.balance}</span> ₽</div>
+                        <div>Ставка: <span style="color: #00ccff;" id="currentBet">${this.currentBet}</span> ₽</div>
+                        <div>Множитель: <span style="color: #33cc33;" id="mineMultiplier">1x</span></div>
+                    </div>
+                    
+                    <div class="bet-controls">
+                        <button class="btn bet-minus">-10</button>
+                        <span class="bet-amount">Ставка: ${this.currentBet} ₽</span>
+                        <button class="btn bet-plus">+10</button>
+                    </div>
+                    
+                    <div class="mine-grid" id="mineGrid">
+                        ${Array(25).fill().map((_, i) => 
+                            `<div class="mine-cell" data-cell="${i}">?</div>`
+                        ).join('')}
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="btn btn-register" id="cashOut">Забрать выигрыш</button>
+                        <button class="btn btn-login" id="resetMine">Новая игра</button>
+                    </div>
+                    
+                    <div id="mineResult" style="text-align: center; margin-top: 20px;"></div>
+                `;
+                
+                this.setupMineGame();
+            }
+            
+            setupMineGame() {
+                const cells = document.querySelectorAll('.mine-cell');
+                const minePositions = new Set();
+                
+                // Случайно размещаем 5 мин
+                while (minePositions.size < 5) {
+                    minePositions.add(Math.floor(Math.random() * 25));
+                }
+                
+                let multiplier = 1;
+                let gameActive = true;
+                
+                cells.forEach(cell => {
+                    cell.addEventListener('click', () => {
+                        if (!gameActive) return;
+                        
+                        const cellIndex = parseInt(cell.dataset.cell);
+                        
+                        if (minePositions.has(cellIndex)) {
+                            // Попали на мину
+                            cell.innerHTML = '<i class="fas fa-bomb"></i>';
+                            cell.classList.add('mine');
+                            gameActive = false;
+                            
+                            userSystem.updateBalance(-this.currentBet);
+                            document.getElementById('mineResult').innerHTML = 
+                                `<div style="color: #ff3333; font-size: 1.2rem;">
+                                    <i class="fas fa-times"></i> Вы проиграли ${this.currentBet} ₽
+                                </div>`;
+                        } else {
+                            // Нашли алмаз
+                            cell.innerHTML = '<i class="fas fa-gem"></i>';
+                            cell.classList.add('revealed');
+                            multiplier *= 1.5;
+                            
+                            document.getElementById('mineMultiplier').textContent = multiplier.toFixed(1) + 'x';
+                        }
+                    });
+                });
+                
+                document.getElementById('cashOut').addEventListener('click', () => {
+                    if (gameActive && multiplier > 1) {
+                        const winAmount = Math.floor(this.currentBet * multiplier);
+                        userSystem.updateBalance(winAmount);
+                        gameActive = false;
+                        
+                        document.getElementById('mineResult').innerHTML = 
+                            `<div style="color: #33cc33; font-size: 1.2rem;">
+                                <i class="fas fa-check"></i> Вы выиграли ${winAmount} ₽!
+                            </div>`;
+                    }
+                });
+                
+                document.getElementById('resetMine').addEventListener('click', () => {
+                    this.loadMineGame(document.getElementById('gameContainer'));
+                });
+            }
+            
+            loadRocketGame(container) {
+                container.innerHTML = `
+                    <div class="game-stats">
+                        <div>Баланс: <span style="color: #ffcc00;">${userSystem.currentUser.balance}</span> ₽</div>
+                        <div>Ставка: <span style="color: #00ccff;" id="currentBet">${this.currentBet}</span> ₽</div>
+                    </div>
+                    
+                    <div class="bet-controls">
+                        <button class="btn bet-minus">-10</button>
+                        <span class="bet-amount">Ставка: ${this.currentBet} ₽</span>
+                        <button class="btn bet-plus">+10</button>
+                    </div>
+                    
+                    <div class="rocket-container">
+                        <div class="rocket" id="rocket">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="multiplier" id="rocketMultiplier">1.0x</div>
+                    
+                    <div class="rocket-controls" style="text-align: center;">
+                        <button class="btn btn-register" id="launchRocket">Запустить ракету</button>
+                        <button class="btn btn-login" id="stopRocket">Остановить</button>
+                    </div>
+                    
+                    <div id="rocketResult" style="text-align: center; margin-top: 20px;"></div>
+                `;
+                
+                this.setupRocketGame();
+            }
+            
+            setupRocketGame() {
+                const rocket = document.getElementById('rocket');
+                const launchBtn = document.getElementById('launchRocket');
+                const stopBtn = document.getElementById('stopRocket');
+                const multiplierDisplay = document.getElementById('rocketMultiplier');
+                
+                let rocketFlying = false;
+                let multiplier = 1;
+                let flightInterval;
+                
+                launchBtn.addEventListener('click', () => {
+                    if (rocketFlying) return;
+                    
+                    rocketFlying = true;
+                    rocket.classList.add('flying');
+                    multiplier = 1;
+                    
+                    flightInterval = setInterval(() => {
+                        multiplier += 0.1;
+                        multiplierDisplay.textContent = multiplier.toFixed(1) + 'x';
+                        
+                        // Случайный краш
+                        if (Math.random() < 0.02) {
+                            this.crashRocket(multiplier);
+                        }
+                    }, 200);
+                });
+                
+                stopBtn.addEventListener('click', () => {
+                    if (!rocketFlying) return;
+                    
+                    this.stopRocket(multiplier);
+                });
+            }
+            
+            crashRocket(multiplier) {
+                clearInterval(flightInterval);
+                document.getElementById('rocket').classList.remove('flying');
+                
+                userSystem.updateBalance(-this.currentBet);
+                document.getElementById('rocketResult').innerHTML = 
+                    `<div style="color: #ff3333; font-size: 1.2rem;">
+                        <i class="fas fa-times"></i> Ракета упала! Вы проиграли ${this.currentBet} ₽
+                    </div>`;
+            }
+            
+            stopRocket(multiplier) {
+                clearInterval(flightInterval);
+                document.getElementById('rocket').classList.remove('flying');
+                rocketFlying = false;
+                
+                const winAmount = Math.floor(this.currentBet * multiplier);
+                userSystem.updateBalance(winAmount);
+                
+                document.getElementById('rocketResult').innerHTML = 
+                    `<div style="color: #33cc33; font-size: 1.2rem;">
+                        <i class="fas fa-check"></i> Вы выиграли ${winAmount} ₽!
+                    </div>`;
+            }
+            
+            loadDiceGame(container) {
+                container.innerHTML = `
+                    <div class="game-stats">
+                        <div>Баланс: <span style="color: #ffcc00;">${userSystem.currentUser.balance}</span> ₽</div>
+                        <div>Ставка: <span style="color: #00ccff;" id="currentBet">${this.currentBet}</span> ₽</div>
+                    </div>
+                    
+                    <div class="bet-controls">
+                        <button class="btn bet-minus">-10</button>
+                        <span class="bet-amount">Ставка: ${this.currentBet} ₽</span>
+                        <button class="btn bet-plus">+10</button>
+                    </div>
+                    
+                    <div class="dice-result" id="diceResult">
+                        <i class="fas fa-dice"></i>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <button class="btn btn-register" id="rollDice">Бросить кости</button>
+                    </div>
+                    
+                    <div id="diceGameResult" style="text-align: center; margin-top: 20px;"></div>
+                `;
+                
+                document.getElementById('rollDice').addEventListener('click', () => {
+                    const dice = document.getElementById('diceResult');
+                    dice.classList.add('dice-roll');
+                    
+                    setTimeout(() => {
+                        dice.classList.remove('dice-roll');
+                        const roll1 = Math.floor(Math.random() * 6) + 1;
+                        const roll2 = Math.floor(Math.random() * 6) + 1;
+                        const total = roll1 + roll2;
+                        
+                        dice.innerHTML = `${roll1} + ${roll2} = <span style="color: #ffcc00;">${total}</span>`;
+                        
+                        // Простая логика выигрыша
+                        if (total >= 7) {
+                            const winAmount = this.currentBet * 2;
+                            userSystem.updateBalance(winAmount);
+                            document.getElementById('diceGameResult').innerHTML = 
+                                `<div style="color: #33cc33; font-size: 1.2rem;">
+                                    <i class="fas fa-check"></i> Вы выиграли ${winAmount} ₽!
+                                </div>`;
+                        } else {
+                            userSystem.updateBalance(-this.currentBet);
+                            document.getElementById('diceGameResult').innerHTML = 
+                                `<div style="color: #ff3333; font-size: 1.2rem;">
+                                    <i class="fas fa-times"></i> Вы проиграли ${this.currentBet} ₽
+                                </div>`;
+                        }
+                    }, 500);
+                });
+            }
+            
+            loadCoinGame(container) {
+                container.innerHTML = `
+                    <div class="game-stats">
+                        <div>Баланс: <span style="color: #ffcc00;">${userSystem.currentUser.balance}</span> ₽</div>
+                        <div>Ставка: <span style="color: #00ccff;" id="currentBet">${this.currentBet}</span> ₽</div>
+                    </div>
+                    
+                    <div class="bet-controls">
+                        <button class="btn bet-minus">-10</button>
+                        <span class="bet-amount">Ставка: ${this.currentBet} ₽</span>
+                        <button class="btn bet-plus">+10</button>
+                    </div>
+                    
+                    <div class="coin-result" id="coinResult">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="btn btn-register" id="headsBtn">Орел (x2)</button>
+                        <button class="btn btn-login" id="tailsBtn">Решка (x2)</button>
+                    </div>
+                    
+                    <div id="coinGameResult" style="text-align: center; margin-top: 20px;"></div>
+                `;
+                
+                document.getElementById('headsBtn').addEventListener('click', () => {
+                    this.flipCoin('heads');
+                });
+                
+                document.getElementById('tailsBtn').addEventListener('click', () => {
+                    this.flipCoin('tails');
+                });
+            }
+            
+            flipCoin(choice) {
+                const coin = document.getElementById('coinResult');
+                coin.classList.add('coin-flip');
+                
+                setTimeout(() => {
+                    coin.classList.remove('coin-flip');
+                    const result = Math.random() > 0.5 ? 'heads' : 'tails';
+                    
+                    coin.innerHTML = result === 'heads' 
+                        ? '<i class="fas fa-crown"></i> Орел' 
+                        : '<i class="fas fa-coins"></i> Решка';
+                    
+                    if (result === choice) {
+                        const winAmount = this.currentBet * 2;
+                        userSystem.updateBalance(winAmount);
+                        document.getElementById('coinGameResult').innerHTML = 
+                            `<div style="color: #33cc33; font-size: 1.2rem;">
+                                <i class="fas fa-check"></i> Вы выиграли ${winAmount} ₽!
+                            </div>`;
+                    } else {
+                        userSystem.updateBalance(-this.currentBet);
+                        document.getElementById('coinGameResult').innerHTML = 
+                            `<div style="color: #ff3333; font-size: 1.2rem;">
+                                <i class="fas fa-times"></i> Вы проиграли ${this.currentBet} ₽
+                            </div>`;
+                    }
+                }, 500);
+            }
+        }
+        
+        // Инициализация игровой системы
+        const gameSystem = new GameSystem();
+        
+        // Обработчики модальных окон
+        document.getElementById('loginBtn').addEventListener('click', () => {
+            document.getElementById('loginModal').style.display = 'flex';
+        });
+        
+        document.getElementById('registerBtn').addEventListener('click', () => {
+            document.getElementById('registerModal').style.display = 'flex';
+        });
+        
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            userSystem.logout();
+        });
+        
+        // Форма входа
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            const result = userSystem.login(username, password);
+            
+            if (result.success) {
+                document.getElementById('loginModal').style.display = 'none';
+                document.getElementById('loginForm').reset();
+                alert(`Добро пожаловать, ${result.user.username}!`);
+            } else {
+                alert(result.message);
             }
         });
         
-        // Модальное окно
-        function showModal(title, message) {
-            // Создаем модальное окно, если его нет
-            let modal = document.querySelector('.modal-overlay');
-            if (!modal) {
-                modal = document.createElement('div');
-                modal.className = 'modal-overlay';
-                modal.style.cssText = `
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0, 0, 0, 0.8);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    z-index: 2000;
-                    opacity: 0;
-                    transition: opacity 0.3s;
-                `;
-                
-                const modalContent = document.createElement('div');
-                modalContent.style.cssText = `
-                    background: linear-gradient(135deg, #1a1a2e, #0a0a1a);
-                    padding: 40px;
-                    border-radius: 20px;
-                    max-width: 500px;
-                    width: 90%;
-                    border: 2px solid rgba(255, 204, 0, 0.3);
-                    box-shadow: 0 0 30px rgba(255, 204, 0, 0.2);
-                    transform: translateY(-50px);
-                    transition: transform 0.3s;
-                `;
-                
-                const modalTitle = document.createElement('h3');
-                modalTitle.style.cssText = `
-                    color: #ffcc00;
-                    font-size: 1.8rem;
-                    margin-bottom: 20px;
-                    text-align: center;
-                `;
-                
-                const modalMessage = document.createElement('p');
-                modalMessage.style.cssText = `
-                    color: #ccc;
-                    margin-bottom: 30px;
-                    line-height: 1.5;
-                    text-align: center;
-                `;
-                
-                const closeButton = document.createElement('button');
-                closeButton.className = 'btn btn-register';
-                closeButton.style.cssText = `
-                    display: block;
-                    margin: 0 auto;
-                `;
-                closeButton.innerHTML = '<i class="fas fa-check"></i> Понятно';
-                closeButton.addEventListener('click', () => {
-                    document.body.removeChild(modal);
-                });
-                
-                modalContent.appendChild(modalTitle);
-                modalContent.appendChild(modalMessage);
-                modalContent.appendChild(closeButton);
-                modal.appendChild(modalContent);
-                document.body.appendChild(modal);
-                
-                // Анимация появления
-                setTimeout(() => {
-                    modal.style.opacity = '1';
-                    modalContent.style.transform = 'translateY(0)';
-                }, 10);
+        // Форма регистрации
+        document.getElementById('registerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('regUsername').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Пароли не совпадают!');
+                return;
             }
             
-            // Обновляем содержимое
-            modal.querySelector('h3').textContent = title;
-            modal.querySelector('p').textContent = message;
-            modal.style.display = 'flex';
+            if (password.length < 4) {
+                alert('Пароль должен содержать минимум 4 символа');
+                return;
+            }
             
-            // Закрытие по клику вне окна
+            const result = userSystem.register(username, email, password);
+            
+            if (result.success) {
+                document.getElementById('registerModal').style.display = 'none';
+                document.getElementById('registerForm').reset();
+                alert(`Регистрация успешна! Добро пожаловать, ${username}! Вам начислено 1000 ₽.`);
+            } else {
+                alert(result.message);
+            }
+        });
+        
+        // Переключение между формами
+        document.getElementById('showRegisterForm').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('loginModal').style.display = 'none';
+            document.getElementById('registerModal').style.display = 'flex';
+        });
+        
+        document.getElementById('showLoginForm').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('registerModal').style.display = 'none';
+            document.getElementById('loginModal').style.display = 'flex';
+        });
+        
+        // Закрытие модальных окон
+        document.getElementById('closeLoginModal').addEventListener('click', () => {
+            document.getElementById('loginModal').style.display = 'none';
+        });
+        
+        document.getElementById('closeRegisterModal').addEventListener('click', () => {
+            document.getElementById('registerModal').style.display = 'none';
+        });
+        
+        document.getElementById('closeGameModal').addEventListener('click', () => {
+            document.getElementById('gameModal').style.display = 'none';
+        });
+        
+        // Закрытие по клику вне окна
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
-                    document.body.removeChild(modal);
+                    modal.style.display = 'none';
                 }
             });
-        }
+        });
+        
+        // Демо-аккаунт для быстрого входа
+        document.addEventListener('DOMContentLoaded', () => {
+            // Создаем демо-пользователя, если нет пользователей
+            if (userSystem.users.length === 0) {
+                userSystem.register('demo', 'demo@almaz.com', 'demo123');
+            }
+            
+            // Подсказка для демо-входа
+            setTimeout(() => {
+                if (!userSystem.currentUser) {
+                    console.log('Демо-доступ: логин: demo, пароль: demo123');
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>
